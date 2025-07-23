@@ -65,7 +65,7 @@ uint8_t AHT10_Measure(float *pTemperature, float *pHumidity){
 
 /// @brief 
 /// @param  None
-/// @return 湿度（浮点型）
+/// @return 
 float AHT10_GetHumidity(void){
     uint8_t humiTemp[3]={0};
     uint32_t humi=0;
