@@ -12,8 +12,6 @@ void AHT10_Init(void){
     HAL_I2C_Master_Transmit(&AHT10_I2C,AHT10_ADDRESS,Init_Commands,3,100);
 }
 
-
-
 /// @brief 
 /// @param  None
 void AHT10_Reset(void){
@@ -21,8 +19,6 @@ void AHT10_Reset(void){
     HAL_I2C_Master_Transmit(&AHT10_I2C,AHT10_ADDRESS,&Reset_Command,1,100);
     HAL_Delay(20);
 }
-
-
 
 /// @brief 
 /// @param  None
@@ -33,8 +29,6 @@ void AHT10_Trig_Measure(void){
     Trig_Commands[2]=0x00;
     HAL_I2C_Master_Transmit(&AHT10_I2C,AHT10_ADDRESS,Trig_Commands,3,100);
 }
-
-
 
 /// @brief 
 /// @param pOriginData 
@@ -49,8 +43,6 @@ uint8_t AHT10_Read_Data(uint8_t *pOriginData){
         return 1;
     }
 }
-
-
 
 /// @brief 
 /// @param pTemperature 
@@ -70,8 +62,6 @@ uint8_t AHT10_Measure(float *pTemperature, float *pHumidity){
 
     return readFlag;
 }
-
-
 
 /// @brief 
 /// @param  None
@@ -99,8 +89,6 @@ float AHT10_GetHumidity(void){
 
     return tempHumidity;
 }
-
-
 
 /// @brief 
 /// @param  None   
